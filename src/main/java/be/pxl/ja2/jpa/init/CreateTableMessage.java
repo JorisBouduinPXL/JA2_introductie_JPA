@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class CreateTableMessage {
 
     public static void main(String[] args) {
-        try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/musicdb?useSSL=false", "user", "password");
+        try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/musicdb?useSSL=false", "user", "java");
             Statement statement = conn.createStatement()) {
             statement.execute("CREATE TABLE message (id INTEGER NOT NULL AUTO_INCREMENT, text TEXT, PRIMARY KEY (id))");
         } catch (SQLException e) {
